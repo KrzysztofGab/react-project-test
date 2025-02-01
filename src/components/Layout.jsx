@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Notifications } from "./Notifications";
+
 
 const navLinks = [
     { title: "Home", to: "/", icon: "feather-home" },
@@ -11,6 +13,7 @@ const navLinks = [
 
 
 export const Layout = ({ children }) => (
+
     <Fragment>
         <div className="nav-header bg-white shadow-xs border-0">
             <div className="nav-top">
@@ -48,42 +51,9 @@ export const Layout = ({ children }) => (
                 </NavLink>
             ))}
 
-            {/* <NavLink
-            activeClassName="active"
-            to="/home"
-            className="p-2 text-center ms-3 menu-icon center-menu-icon"
-        >
-            <i className="feather-home font-lg bg-greylight btn-round-lg theme-dark-bg text-grey-500 "></i>
-        </NavLink>
-        <NavLink
-            activeClassName="active"
-            to="/defaultstorie"
-            className="p-2 text-center ms-0 menu-icon center-menu-icon"
-        >
-            <i className="feather-zap font-lg bg-greylight btn-round-lg theme-dark-bg text-grey-500 "></i>
-        </NavLink>
-        <NavLink
-            activeClassName="active"
-            to="/defaultvideo"
-            className="p-2 text-center ms-0 menu-icon center-menu-icon"
-        >
-            <i className="feather-video font-lg bg-greylight btn-round-lg theme-dark-bg text-grey-500 "></i>
-        </NavLink>
-        <NavLink
-            activeClassName="active"
-            to="/defaultgroup"
-            className="p-2 text-center ms-0 menu-icon center-menu-icon"
-        >
-            <i className="feather-user font-lg bg-greylight btn-round-lg theme-dark-bg text-grey-500 "></i>
-        </NavLink>
-        <NavLink
-            activeClassName="active"
-            to="/shop2"
-            className="p-2 text-center ms-0 menu-icon center-menu-icon"
-        >
-            <i className="feather-shopping-bag font-lg bg-greylight btn-round-lg theme-dark-bg text-grey-500 "></i>
-        </NavLink> */}
+
             {/* /Desktop Menu */}
+            <Notifications />
             <Link
                 to="/defaultmessage"
                 className="p-2 text-center ms-3 menu-icon chat-active-btn"
@@ -94,7 +64,8 @@ export const Layout = ({ children }) => (
             <Link to="defaultsettings" className="p-0 ms-3 menu-icon">
                 <img src="assets/images/user.png" alt="user" className="w40 mt--1" />
             </Link>
-            {children}
+
         </div>
+        {children}
     </Fragment>
 );
